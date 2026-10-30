@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel Link Guard",
+  "version": "1.0.0",
+  "description": "Checks links before they open (local heuristics + your Mac's Sentinel engine). No accounts, no telemetry.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoCfFhuUG9qea5IZaWH+CS+r3tc823Gynqfe63FF1Ce3dIQg/N9cv4v7AIT+/4gweQg86mXYayJ+vsR3Ry9hYXcwWBWYJU/JRJ8AXEA/IgPsV/d+PyHXW219GGYnbZZ7c73cW/SaY7HVQeYUBjvwQUG2DX50bgH9f0YwrZMDq/xogDkCJluCQ4d9qIZtCylASEkPZeeNBxsiCwQVCcut/IR94JlqCXstMFbgaKEb8nqtJcyUw1erZBf0QAu9tETmav/e5dgxa7xispssLvRKeNPHK79e2Lo+dBTr/UcTivWBqXaSmgpLl5gGiWDY1WR5Q6xJLYNhtOsD7oSoyNp64hwIDAQAB",
+  "minimum_chrome_version": "116",
+  "permissions": ["webNavigation", "tabs", "storage", "contextMenus", "nativeMessaging"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Sentinel Link Guard",
+              "default_icon": { "16": "icons/16.png", "32": "icons/32.png" } },
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+}

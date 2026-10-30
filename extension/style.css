@@ -1,0 +1,36 @@
+:root { --red: #b42318; --amber: #b54708; --green: #067647; --ink: #1d2939; --muted: #667085; }
+* { box-sizing: border-box; }
+body { font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; color: var(--ink); margin: 0; }
+
+.interstitial { background: #fef3f2; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; }
+.interstitial.caution { background: #fffaeb; }
+.interstitial.clean { background: #ecfdf3; }
+.interstitial main { max-width: 680px; margin: 8vh 24px; background: #fff; border-radius: 14px; padding: 32px 36px;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, .12); }
+.badge { display: inline-block; font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 999px; background: #eee; }
+.badge.dangerous { background: var(--red); color: #fff; }
+.badge.caution { background: var(--amber); color: #fff; }
+.badge.clean { background: var(--green); color: #fff; }
+h1 { font-size: 26px; margin: 14px 0 6px; }
+h2 { font-size: 15px; margin: 22px 0 6px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.url { font-family: ui-monospace, Menlo, monospace; word-break: break-all; background: #f2f4f7; padding: 8px 10px; border-radius: 8px; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+.note, .foot, .muted { color: var(--muted); font-size: 13px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; align-items: center; }
+button { font: inherit; border-radius: 8px; padding: 9px 16px; cursor: pointer; border: 1px solid #d0d5dd; background: #fff; }
+button.primary { background: var(--ink); color: #fff; border-color: var(--ink); font-weight: 600; }
+button.link { border: none; background: none; color: var(--muted); text-decoration: underline; padding: 4px; }
+
+.popup { width: 340px; padding: 14px 16px; }
+.popup h1 { font-size: 17px; margin: 0 0 10px; }
+.popup h2 { font-size: 12px; }
+.status { font-size: 13px; padding: 8px; border-radius: 8px; margin: 10px 0 4px; }
+.status.ok { background: #ecfdf3; }
+.status.warn { background: #fffaeb; }
+.toggle { display: flex; gap: 8px; align-items: center; }
+#checkForm { display: flex; gap: 6px; margin-top: 12px; }
+#checkForm input { flex: 1; font: inherit; font-size: 13px; padding: 6px 8px; border: 1px solid #d0d5dd; border-radius: 8px; }
+#checkResult { font-size: 13px; margin-top: 8px; }
+strong.dangerous { color: var(--red); } strong.caution { color: var(--amber); } strong.clean { color: var(--green); }

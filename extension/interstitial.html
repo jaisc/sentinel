@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sentinel — warning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="interstitial">
+<main>
+  <div class="badge" id="badge">Checking…</div>
+  <h1 id="headline">Sentinel is checking this link</h1>
+  <p class="url" id="url"></p>
+  <section>
+    <h2>Why Sentinel stopped this</h2>
+    <ul id="reasons"></ul>
+    <p class="note" id="note"></p>
+  </section>
+  <section class="what">
+    <h2>What to do</h2>
+    <p id="advice"></p>
+  </section>
+  <div class="actions">
+    <button id="back" class="primary">Go back (safe)</button>
+    <button id="proceed" class="secondary">Proceed anyway</button>
+    <button id="always" class="link">Always allow this site</button>
+  </div>
+  <p class="foot">Sentinel Link Guard · checks run locally on your Mac. <span id="source"></span></p>
+</main>
+<script src="interstitial.js" type="module"></script>
+</body>
+</html>

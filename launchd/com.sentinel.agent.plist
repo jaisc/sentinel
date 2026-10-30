@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template: setup.sh replaces @PROGRAM_ARGUMENTS@ and @LOG_DIR@.
+     Native mode runs SentinelAgent.app (FSEvents); fallback mode runs `sentinel watch` (polling). -->
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.sentinel.agent</string>
+	<key>ProgramArguments</key>
+	<array>
+@PROGRAM_ARGUMENTS@
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>LowPriorityIO</key>
+	<true/>
+	<key>StandardOutPath</key>
+	<string>@LOG_DIR@/agent.log</string>
+	<key>StandardErrorPath</key>
+	<string>@LOG_DIR@/agent.log</string>
+</dict>
+</plist>

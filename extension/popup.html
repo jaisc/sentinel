@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="popup">
+  <h1>Sentinel Link Guard</h1>
+  <label class="toggle"><input type="checkbox" id="enabled"> Check links before they open</label>
+  <div id="engine" class="status">Connecting to the local engine…</div>
+  <div id="stats" class="muted"></div>
+  <form id="checkForm">
+    <input id="checkUrl" type="url" placeholder="Paste a link to check" required>
+    <button type="submit">Check</button>
+  </form>
+  <div id="checkResult"></div>
+  <h2>Always-allowed sites</h2>
+  <ul id="allow"></ul>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

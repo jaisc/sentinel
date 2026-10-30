@@ -1,0 +1,14 @@
+# Build artifacts
+macos/.build/
+*.o
+*.swiftmodule
+
+# Scan output — these are real reports about real files on a real Mac
+Reports/
+
+# Runtime state (lives in ~/.Sentinel, but never commit a stray copy)
+*.log
+.Sentinel/
+
+# macOS
+.DS_Store
